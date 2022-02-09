@@ -112,6 +112,9 @@ p {
     .h4 {
         font-size: 20px;
     }
+    .h5 {
+        font-size: 16px;
+    }
     p {
         font-size: 20px;
     }
@@ -146,6 +149,9 @@ p {
     .h4 {
         font-size: 20px;
     }
+    .h5 {
+        font-size: 15px;
+    }
     p {
         font-size: 16px;
     }
@@ -162,6 +168,9 @@ p {
     }
     .h4 {
         font-size: 20px;
+    }
+    .h5 {
+        font-size: 14px;
     }
     p {
         font-size: 16px;
@@ -432,7 +441,7 @@ section {
 
 @media (max-width: 1199px) {
     .products .product {
-        width: calc(50% - 7.5px);
+        width: calc(50% - 10px);
         margin-right: 0 !important;
         margin-bottom: 15px;
     }
@@ -667,3 +676,267 @@ footer {
 
 
 
+/*SWIPER*/
+.mySwiper {
+    position: relative;
+    max-height: 550px;
+    display: flex;
+}
+
+.mySwiper .swiper-wrapper {
+    width: 50%;
+    margin: 0;
+    padding-left: 50px;
+    display: inline-block;
+}
+.mySwiper .swiper-pagination {
+    width: 50%;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.mySwiper .swiper-slide .desc {
+    display: none;
+}
+.mySwiper .swiper-slide.swiper-slide-active .desc {
+    /*display: block;*/
+}
+
+.mySwiper .swiper-pagination-bullet {
+    height: 72px;
+    width: 72px;
+    background: #3B29C2;
+    overflow: hidden;
+    padding: 7px;
+    opacity: 1;
+    transition: all .3s;
+}
+
+.mySwiper.bullet-items-5 .swiper-pagination-bullet {
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.mySwiper.bullet-items-5 .swiper-pagination-bullet:nth-child(1) {
+    top: 6.4%;
+    left: 25%;
+}
+.mySwiper.bullet-items-5 .swiper-pagination-bullet:nth-child(2) {
+    top: 6.4%;
+    left: 75%;
+}
+.mySwiper.bullet-items-5 .swiper-pagination-bullet:nth-child(3) {
+    top: 50%;
+    left: 100%;
+}
+.mySwiper.bullet-items-5 .swiper-pagination-bullet:nth-child(4) {
+    top: 92.6%;
+    left: 75%;
+}
+.mySwiper.bullet-items-5 .swiper-pagination-bullet:nth-child(5) {
+    top: 92.6%;
+    left: 25%;
+}
+
+
+.mySwiper .swiper-pagination-bullet img {
+    width: 100%;
+    height: 100%;
+}
+.mySwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    height: 124px;
+    width: 124px;
+}
+
+.mySwiper .swiper-pagination {
+    width: 50%;
+    top: 0;
+    left: 0;
+    transform: none;
+    padding: 30px;
+}
+
+.mySwiper .swiper-pagination .inner-wrapper {
+    padding-bottom: 100%;
+    height: 0;
+    position: relative;
+    transform: none;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    top: unset;
+    right: unset;
+    left: unset;
+    bottom: unset;
+}
+
+.mySwiper .swiper-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative;
+    /*height: 600px !important;*/
+    /*overflow: hidden;*/
+    /*transform: none !important;*/
+}
+
+.swiper-button-prev{
+    top: 0;
+    bottom: unset;
+    left: auto;
+}
+.swiper-button-next {
+    bottom: 0;
+    top: unset;
+}
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    left: calc(50% + 40px);
+    height: auto;
+    width: auto;
+    right: unset;
+    margin-top: 5px;
+    z-index: 10;
+    cursor: pointer;
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+   content: none;
+}
+.swiper-button-prev:before {
+   content: '';
+    border: 20px solid transparent;
+    border-bottom-width: 27px;
+    border-top-width: 0;
+    border-bottom-color: var(--color-primary);
+}
+.swiper-button-next:before {
+    content: '';
+    border: 20px solid transparent;
+    border-top-width: 27px;
+    border-bottom-width: 0;
+    border-top-color: var(--color-primary);
+}
+
+.swiper-slide {
+    transition: all .3s;
+    color: #7676768F;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.swiper-slide-prev,
+.swiper-slide-next {
+    color: #767676;
+}
+.swiper-slide-active,
+.swiper-slide-duplicate-active{
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+@media (max-width: 1600px) {
+    .swiper-button-prev:before {
+        content: '';
+        border: 15px solid transparent;
+        border-bottom-width: 20px;
+    }
+    .swiper-button-next:before {
+        content: '';
+        border: 15px solid transparent;
+        border-top-width: 20px;
+    }
+
+    .mySwiper .swiper-pagination-bullet {
+        height: 60px;
+        width: 60px;
+    }
+
+    .mySwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        height: 90px;
+        width: 90px;
+    }
+}
+
+@media (max-width: 991px) {
+    .mySwiper .swiper-pagination-bullet {
+        height: 50px;
+        width: 50px;
+        padding: 4px;
+    }
+
+    .mySwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        height: 70px;
+        width: 70px;
+    }
+    .mySwiper .swiper-pagination {
+        padding: 17px;
+    }
+}
+
+@media (max-width: 576px) {
+    .swiper-button-prev:before {
+        content: '';
+        border: 15px solid transparent;
+        border-bottom-width: 20px;
+    }
+    .swiper-button-next:before {
+        content: '';
+        border: 15px solid transparent;
+        border-top-width: 20px;
+    }
+
+    .mySwiper .swiper-pagination-bullet {
+        height: 35px;
+        width: 35px;
+    }
+
+    .mySwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        height: 55px;
+        width: 55px;
+    }
+}
+
+@media (max-width: 420px) {
+    .swiper-button-prev:before {
+        content: '';
+        border: 15px solid transparent;
+        border-bottom-width: 20px;
+    }
+    .swiper-button-next:before {
+        content: '';
+        border: 15px solid transparent;
+        border-top-width: 20px;
+    }
+
+    .mySwiper .swiper-pagination-bullet {
+        height: 26px;
+        width: 26px;
+    }
+
+    .mySwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+.test {
+    position: absolute;
+    top: 17%;
+    bottom: 17%;
+    left: 8.5%;
+    height: 65%;
+    animation: test infinite 100s;
+}
+
+@media (max-width: 1200px) {
+    .test {
+        left: 8.5%;
+    }
+}
+
+@keyframes test {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
